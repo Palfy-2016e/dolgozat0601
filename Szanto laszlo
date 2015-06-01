@@ -1,0 +1,37 @@
+1.)a=0
+list=([int(i) for i in open("/home/sis/Asztal/jegy.txt").readlines()])
+for x in list:
+    a=x+a
+print(a/len(list))
+2.)jegyek = [5,5,5,5,5,3,5,5,5]
+def atlag(jegyek):
+    lista = []
+    c=""
+    for s in jegyek:
+        if 5>=s:
+            lista.append(s)
+    a = sum(lista)
+    if a%5==0:
+        c="kituno"
+    else:
+        c="nem kituno"
+    return c
+print(atlag(jegyek))
+3.)def szame(x):
+    seged=[]
+    for i in x:
+        seged.append(i)
+    print(seged)
+    for i in range(len(seged)):
+        try:
+            int(seged[i])
+            
+        except ValueError:
+            return False
+    return True
+4.)def novekvo(a):
+  for i in range(0,len(a)-1):
+      if a[i] < a[i+1]:
+          return True
+      else:
+          return False
