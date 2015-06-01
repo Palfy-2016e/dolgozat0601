@@ -1,0 +1,10 @@
+jegyek=open("/home/sis/Asztal/jegy01.txt","r")
+liste=[]
+for sor in jegyek:
+liste.append(sor[:-1]) 
+li=[]
+for a in liste:
+if a!="":
+li.append(a)
+li=map(int,li)
+print(sum(li)/len(li))
